@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Your Name"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:id="@+id/flavours_text_view"
+            style="@style/HeaderTextStyle"
+            android:text="Flavours" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/kesarPista_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Kesar Pista" />
+
+                <CheckBox
+                    android:id="@+id/Chocolate_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Chocolate" />
+
+                <CheckBox
+                    android:id="@+id/ButterScotch_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Butter Scotch" />
+
+                <CheckBox
+                    android:id="@+id/RajBhog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="RajBhog" />
+
+                <CheckBox
+                    android:id="@+id/Vanilla_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Vanilla" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/StrawBerry_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="StrawBerry" />
+
+                <CheckBox
+                    android:id="@+id/ChocoChips_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Choco Chips" />
+
+                <CheckBox
+                    android:id="@+id/AmericanDryFruits_CheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="American DryFruits" />
+
+                <CheckBox
+                    android:id="@+id/KajuDraksh_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Kaju Draksh" />
+
+                <CheckBox
+                    android:id="@+id/Mango_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Mango" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="quantity" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/decrement_button_view"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="decrementOrder"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/quantity_no_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/increment_button_view"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="incrementOrder"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="Price Per IceCream :" />
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="50₹" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/homeDelivery_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="8dp"
+            android:text="Home Delivery" />
+
+        <TextView
+            android:id="@+id/Order_summary_text_view"
+            style="@style/HeaderTextStyle"
+            android:text="Order Summary " />
+
+        <TextView
+            android:id="@+id/summary_String"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text=" "
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/order_button_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="submitOrder"
+            android:text="Order" />
+
+    </LinearLayout>
+</ScrollView>
